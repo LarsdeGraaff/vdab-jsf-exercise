@@ -23,12 +23,27 @@
     <div class="container">
         <h1>FORM</h1>
         <h:form>first name
-            <h:inputText value="#{User.firstName}"/>
+            <h:inputText styleClass="inputVoornaam col-md-12" value="#{User.firstName}"/>
         </h:form>
 
         <h:form>
             last name
-            <h:inputText value="#{User.lastName}"/>
+            <h:inputText styleClass="inputAchternaam col-md-12" value="#{User.lastName}"/>
+        </h:form>
+
+        <h:form>
+            birthDate
+            <h:inputText styleClass="inputBirthdate col-md-12" value="#{User.birthDate}"/>
+        </h:form>
+
+        <h:form>
+            mail
+            <h:inputText styleClass="inputMail col-md-12" value="#{User.mailAdres}"/>
+        </h:form>
+
+        <h:form>
+            Telefoonnummer
+            <h:inputText styleClass="inputTel col-md-12" value="#{User.telNummer}"/>
         </h:form>
 
     </div>
