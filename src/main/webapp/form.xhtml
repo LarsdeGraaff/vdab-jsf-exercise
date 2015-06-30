@@ -19,15 +19,21 @@
 </h:head>
 
 <h:body>
+
     <div class="container">
-        <c:set var="user" value="#{userRepository.findById(param['id' ])}" />
-        <h1><h:outputText value="#{user.firstName} #{user.lastName}"/> </h1>
-        <p>
-            this the the profile page of user  <b><h:outputText value="#{user.firstName}"/>  <h:outputText value="#{user.lastName}"/> </b>
-            who is bron on <b><h:outputText value="#{user.birthDate}"/> </b>
-            and has an id that equals <b><h:outputText value="#{user.id}"/></b>
-        </p>
+        <h1>FORM</h1>
+        <h:form>first name
+            <h:inputText value="#{User.firstName}"/>
+        </h:form>
+
+        <h:form>
+            last name
+            <h:inputText value="#{User.lastName}"/>
+        </h:form>
+
     </div>
+
+
 </h:body>
 
 </html>

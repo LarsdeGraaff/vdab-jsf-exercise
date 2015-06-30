@@ -16,7 +16,11 @@ public class UserRepository {
         return entityManager.createQuery("select u from User u", User.class).getResultList();
     }
 
-    public User findById(){
-        return entityManager.find(User.class, 1);
+    public User findById(int id){
+        return entityManager.find(User.class,id);
+    }
+
+    public void createUser(User user){
+        entityManager.merge(user);
     }
 }
