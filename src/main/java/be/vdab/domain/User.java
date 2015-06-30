@@ -60,4 +60,8 @@ public class User {
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
+
+    public String toString(){
+        return firstName + " " + lastName;
+    }
 }

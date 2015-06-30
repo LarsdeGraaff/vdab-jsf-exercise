@@ -1,6 +1,7 @@
 package be.vdab;
 
 import be.vdab.domain.Fortune;
+import be.vdab.domain.User;
 import be.vdab.repository.FortuneRepository;
 
 import javax.inject.Inject;
@@ -16,4 +17,6 @@ public class FortuneController {
         List<Fortune> fortunes = fortuneRepository.findAll();
         return fortunes.get((int) (Math.random() * fortunes.size())).getMessage();
     }
+
+
 }
