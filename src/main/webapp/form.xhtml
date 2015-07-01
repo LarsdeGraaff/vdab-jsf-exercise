@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
     <script type="application/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -32,7 +33,15 @@
 
 
             <p>BirthDate</p>
-            <h:inputText styleClass="inputBirthdate col-md-12" value="#{userController.user.birthDate}"/>
+
+
+            <h:inputText id="birthDate" styleClass="inputBirthdate col-md-12" value="#{userController.user.birthDate}" converterMessage="niet correct ingevuld, correct = dd mm yyyy">
+                <f:convertDateTime pattern="dd mm yyyy">
+
+                </f:convertDateTime>
+
+            </h:inputText>
+            <span> <h:message for="birthDate" errorClass="alert alert-warning"></h:message></span>
 
 
             <p>Mail</p>

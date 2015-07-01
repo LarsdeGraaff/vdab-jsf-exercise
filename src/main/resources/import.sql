@@ -51,3 +51,4 @@ insert into Fortune(message) values('Fortune favors the brave.');
 
 insert into User(firstName, lastName, birthDate) values('Jimi', 'Hendrix', '1948-12-17');
 insert into User(firstName, lastName, birthDate) values('Janis', 'Joplin', '1952-07-13');
+insert into User(firstName, lastName, birthDate) values('Youri', 'Tielemans', '1997-05-07');

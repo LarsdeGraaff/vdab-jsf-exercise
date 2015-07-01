@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class User {
@@ -15,7 +16,7 @@ public class User {
 
     private String lastName;
 
-    private String birthDate;
+    private Date birthDate;
     private Gender gender;
 
     private String mailAdres;
@@ -28,7 +29,7 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String birthDate,Gender gender, String mailAdres,String telNummer) {
+    public User(String firstName, String lastName, Date birthDate,Gender gender, String mailAdres,String telNummer) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
@@ -82,11 +83,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
