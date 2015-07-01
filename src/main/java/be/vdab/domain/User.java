@@ -93,4 +93,9 @@ public class User {
     public String toString(){
         return firstName + " " + lastName;
     }
+
+    public String fullName() {
+        return firstName + " " + lastName;
+    }
+
 }

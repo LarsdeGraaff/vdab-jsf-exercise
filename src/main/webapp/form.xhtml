@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
 
-    <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="application/javascript"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="fortune.css"/>
 
@@ -22,31 +23,34 @@
 
     <div class="container">
         <h1>FORM</h1>
-        <h:form>First name
+        <h:form><p>First name</p>
             <h:inputText styleClass="inputVoornaam col-md-12" value="#{userController.user.firstName}"/>
 
 
-
-            Last name
+            <p>Last name</p>
             <h:inputText styleClass="inputAchternaam col-md-12" value="#{userController.user.lastName}"/>
 
 
-
-            BirthDate
+            <p>BirthDate</p>
             <h:inputText styleClass="inputBirthdate col-md-12" value="#{userController.user.birthDate}"/>
 
 
-
-            Mail
+            <p>Mail</p>
             <h:inputText styleClass="inputMail col-md-12" value="#{userController.user.mailAdres}"/>
 
 
-            Telefoonnummer
+            <p>Telefoonnummer</p>
             <h:inputText styleClass="inputTel col-md-12" value="#{userController.user.telNummer}"/>
 
+            <p>
+                <h:commandButton class="btn btn-primary" action="#{userController.save()}" value="Add new User"/>
+            </p>
 
-        <h:commandButton class="btn btn-primary" action="#{userController.save()}" value="Add new User"/>
+            <p>
+                <h:commandButton class="btn btn-warning" action="userList.faces" value="cancel"/>
+            </p>
         </h:form>
+
 
     </div>
 

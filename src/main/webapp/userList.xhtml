@@ -22,6 +22,8 @@
 
 <h:body>
     <div class="container">
+
+    <h:form>
         <h1>Userlist</h1>
 
         <h:dataTable styleClass="table table-striped" value="#{userRepository.findAll()}" var="user" >
@@ -29,6 +31,7 @@
                 <f:facet name="header">
                     <h:outputText value="First Name"/>
                 </f:facet>
+                First name
                 <h:outputText value="#{user.firstName}"/>
             </h:column>
 
@@ -55,9 +58,17 @@
                 </h:link>
             </h:column>
 
+
+            <h:column>
+                <h:form>
+                    <h:commandLink action="#{userRepository.}"
+                </h:form>
+            </h:column>
+
+
         </h:dataTable>
 
-        <h:form>
+
             <a href="form.faces" class="btn btn-primary">create new User</a>
         </h:form>
     </div>
