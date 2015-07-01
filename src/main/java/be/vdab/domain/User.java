@@ -1,7 +1,5 @@
 package be.vdab.domain;
 
-import be.vdab.Gender;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,7 +25,7 @@ public class User {
     /**
      * Used by JPA.
      */
-    protected User() {
+    public User() {
     }
 
     public User(String firstName, String lastName, String birthDate,Gender gender, String mailAdres,String telNummer) {
