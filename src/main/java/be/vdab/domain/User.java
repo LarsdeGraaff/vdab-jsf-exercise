@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Past;
 import java.util.Date;
 
 @Entity
@@ -16,6 +17,7 @@ public class User {
 
     private String lastName;
 
+    @Past
     private Date birthDate;
     private Gender gender;
 
